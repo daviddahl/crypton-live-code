@@ -4,5 +4,9 @@ function callback(err, successObject) {
     return;
   }
   console.log('Success object: ');
-  console.log(JSON.stringify(successObject));
+  try {
+    console.log(JSON.stringify(successObject));
+  } catch (ex) {
+    console.log(successObject);
+  }
 }
